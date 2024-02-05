@@ -1,0 +1,42 @@
+
+.modal.vertical-align-center .modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal.vertical-align-center .modal-content {
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Customize modal style */
+.custom-modal {
+    width: 200px; /* Set the width as per your requirement */
+    margin: auto;
+}
+
+/* Square shape */
+.modal-content {
+    border-radius: 0;
+}
+
+/* Center text */
+.modal-body {
+    text-align: center;
+}
+
+/* Style close button */
+.modal-footer {
+    text-align: center;
+}
+
+.specialmodal__content-block--info---btn {
+    cursor: pointer;
+}
