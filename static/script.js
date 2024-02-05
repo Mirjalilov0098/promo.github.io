@@ -1,7 +1,9 @@
 function fetchAndPopulateCodes() {
-    const telegramIdElement = document.getElementById('telegramId');
-    const telegramId = telegramIdElement.textContent.trim();
-    const apiUrl = `/participant_code/amount/${telegramId}/`;
+    // const telegramIdElement = document.getElementById('telegramId');
+    const urlParams = new URLSearchParams(window.location.search);
+    const id_params = urlParams.get('telegram_id');
+    // const telegramId = telegramIdElement.textContent.trim();
+    const apiUrl = `/participant_code/amount/${id_params}/`;
 
     fetch(apiUrl, {
         method: 'POST',
@@ -54,10 +56,12 @@ function enterCode() {
         return;
     }
 
-    const telegramIdElement = document.getElementById('telegramId');
-    const telegramId = telegramIdElement.textContent.trim();
+    // const telegramIdElement = document.getElementById('telegramId');
+    // const telegramId = telegramIdElement.textContent.trim();
+    const urlParams = new URLSearchParams(window.location.search);
+    const id_params = urlParams.get('telegram_id');
 
-    const apiUrl = `/participant_code/${telegramId}/codes/`;
+    const apiUrl = `/participant_code/${id_params}/codes/`;
     fetch(apiUrl, {
         method: 'POST',
         headers: {
