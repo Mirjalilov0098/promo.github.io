@@ -3,7 +3,7 @@ function fetchAndPopulateCodes() {
     const urlParams = new URLSearchParams(window.location.search);
     const id_params = urlParams.get('telegram_id');
     // const telegramId = telegramIdElement.textContent.trim();
-    const apiUrl = `/participant_code/amount/${id_params}/`;
+    const apiUrl = `https://dev-api-client.nich.uz/participant_code/amount/${id_params}/`;
 
     fetch(apiUrl, {
         method: 'POST',
@@ -61,7 +61,7 @@ function enterCode() {
     const urlParams = new URLSearchParams(window.location.search);
     const id_params = urlParams.get('telegram_id');
 
-    const apiUrl = `/participant_code/${id_params}/codes/`;
+    const apiUrl = `https://dev-api-client.nich.uz/participant_code/${id_params}/codes/`;
     fetch(apiUrl, {
         method: 'POST',
         headers: {
