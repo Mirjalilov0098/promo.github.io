@@ -16,8 +16,10 @@ function fetchAndPopulateCodes() {
         .then(response => response.json())
         .then(data => {
             const countSpan = document.getElementById('countPlaceholder');
+
             if (data.hasOwnProperty('number')) {
                 countSpan.textContent = data.number;
+                telegramId.textContent = id_params;
             } else {
                 console.warn('Number property not found in data:', data);
             }
