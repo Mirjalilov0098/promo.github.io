@@ -597,7 +597,7 @@ body {
 }
 
 .promo {
-    background: rgb(221, 31, 37);
+    background: #87DADF;
     min-height: 100vh;
     height: 100%
 }
@@ -726,9 +726,9 @@ body {
 }
 
 .promo__btns-btn:nth-of-type(2) {
-    background: transparent;
+    background: #009490;
     border: 1px solid #FFFFFF;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1094,9 +1094,9 @@ body {
     height: 44px;
     font-size: 16px;
     line-height: 24px;
-    color: #fff;
-    background: #B40007;
-    border: 1px solid #FFFFFF;
+    color: #009490;
+    background: #ffffff;
+    border: 1px solid #009490;
     border-radius: 10px;
     outline: none;
     padding-left: 10px;
@@ -1106,7 +1106,7 @@ body {
 .scancheckinputs__bottom input::placeholder {
     font-size: 16px;
     line-height: 24px;
-    color: #fff;
+    color: #009490;
     font-family: K_TCCCUnity-Bold
 }
 
@@ -1183,12 +1183,13 @@ body {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    color: #fff;
+    color: #005551;
     text-transform: uppercase;
     font-family: K_TCCCUnity-Bold
 }
 
 .story__content-btns {
+    display: flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1318,8 +1319,11 @@ body {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    color: #000;
-    font-family: K_TCCCUnity-Bold
+    background-color: #009490;
+    color: #ffffff;
+    font-family: K_TCCCUnity-Bold;
+    border-radius: 27.57%;
+    padding: 4px 25px;
 }
 
 
@@ -1417,7 +1421,8 @@ body {
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-    color: #f40009
+    color: #009490;
+    font-weight: bold;
 }
 
 .storyThree__bottom {
