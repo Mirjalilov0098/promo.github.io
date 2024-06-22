@@ -1329,7 +1329,8 @@ body {
 
 .storyTwo__info {
     padding: 17px 27px;
-    background: #d7aeae;
+    background: #ffffff;
+    color: #181725;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
