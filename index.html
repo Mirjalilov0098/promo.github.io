@@ -2,17 +2,12 @@
 <html lang="en" style="--tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh;">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Chegirmarket</title>
     <link rel="stylesheet" href="static/index-a0dfee77.css">
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="static/Promo-2117262b.css">
-    <!--    <link href="https://dev-api-client.nich.uz/static/index-a0dfee77.css" rel="stylesheet">-->
-    <!--    <link href="https://dev-api-client.nich.uz/static/style.css" rel="stylesheet">-->
-    <!--    <link href="https://dev-api-client.nich.uz/static/Promo-2117262b.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
@@ -24,28 +19,19 @@
         <div class="container">
             <div class="promo__prizes">
                 <div class="promo__prizes-prize">
-                    <img width="120" height="88"
-                         data-src="static/image_1.png"
-                         class="lazy" src="static/image_1.png" alt="#">
-                    <p class="promo__prizes-prize-info">
-                        Покупайте «Дюшес», «Тархун», «Буратино» и «Лимонад» в любом объеме от 0,5 до 2 л
-                    </p>
+                    <img width="120" height="88" data-src="static/image_1.png" class="lazy" src="static/image_1.png"
+                         alt="#">
+                    <p class="promo__prizes-prize-info" id="promo_prize_1"></p>
                 </div>
                 <div class="promo__prizes-prize">
-                    <img width="120" height="88" class="lazy"
-                         data-src="static/image_2.png"
-                         src="static/image_2.png" alt="#">
-                    <p class="promo__prizes-prize-info">
-                        Зарегистрируйте код под крышкой
-                    </p>
+                    <img width="120" height="88" class="lazy" data-src="static/image_2.png" src="static/image_2.png"
+                         alt="#">
+                    <p class="promo__prizes-prize-info" id="promo_prize_2"></p>
                 </div>
                 <div class="promo__prizes-prize">
-                    <img width="120" height="88" class="lazy"
-                         data-src="static/image_3.png"
-                         src="static/image_3.png" alt="#">
-                    <p class="promo__prizes-prize-info">
-                        Станьте участником розыгрыша денежных призов
-                    </p>
+                    <img width="120" height="88" class="lazy" data-src="static/image_3.png" src="static/image_3.png"
+                         alt="#">
+                    <p class="promo__prizes-prize-info" id="promo_prize_3"></p>
                 </div>
             </div>
         </div>
@@ -57,12 +43,9 @@
                     <div class="specialmodal__content-block">
                         <div class="specialmodal__content-block--icon"><img src="https://botmaker.uz/ncola/" alt="">
                         </div>
-                        <div class="specialmodal__content-block--info"><h3
-                                class="specialmodal__content-block--info---title">Tabriklaymiz!</h3>
-                            <p class="specialmodal__content-block--info---text">Siz Coca-Cola dan 3 oylik mahsulot
-                                zaxirasini yutib oldingiz!<br>Shuningdek, siz ro'yxatdan o'tqazgan kod, 01-02-2024 18:00
-                                bo'lib o'tadigan haftalik sovrinli pul mukofoti o'yinlarida ishtirok etadi.<br>Qopqoqlarni
-                                saqlab, Telegram botimizdagi yangiliklarni kuzatib boring!</p>
+                        <div class="specialmodal__content-block--info">
+                            <h3 class="specialmodal__content-block--info---title" id="congratulations_title"></h3>
+                            <p class="specialmodal__content-block--info---text" id="congratulations_text"></p>
                             <div class="specialmodal__content-block--info---btn">Olish</div>
                         </div>
                     </div>
@@ -86,25 +69,26 @@
             <div class="promo__btns">
                 <div class="scancheckinputs">
                     <div class="scancheckinputs__bottom">
-                        <input id="codeInput" type="text" placeholder="Kodni kiriting">
+                        <input id="codeInput" type="text" placeholder="Kodni kiriting" id="enter_code_placeholder">
                     </div>
                 </div>
-                <div class="promo__btns-btn" onclick="enterCode()">Kodni faollashtirish</div>
+                <div class="promo__btns-btn" onclick="enterCode()" id="activate_code">Kodni faollashtirish</div>
             </div>
         </div>
-        <div class="story" style="padding: 0px 0px 30px;">
+        <div class="story" style="padding: 0 0 30px;">
             <div class="container">
                 <div class="story__content">
-                    <h3 class="story__content-title">Mening tarixim</h3>
+                    <h3 class="story__content-title" id="my_history"></h3>
                     <div class="storyThree">
                         <div class="storyThree__top">
-                            <span>Sizning ID: <span id='telegramId'>{{ telegram_id }}</span></span>
-                            <span>Qopqoqlar soni: <span id="countPlaceholder">{{ count }}</span></span>
+                            <span id="your_id">Sizning ID: <span id='telegramId'>{{ telegram_id }}</span></span>
+                            <span id="number_of_caps">Qopqoqlar soni: <span
+                                    id="countPlaceholder">{{ count }}</span></span>
                         </div>
                     </div>
                     <div class="storyTwo">
                         <div class="storyTwo__navinfo">
-                            <span>Sana</span><span>Ballar</span><span>Status</span>
+                            <span id="date">Sana</span><span id="points">Ballar</span><span id="status">Status</span>
                         </div>
                     </div>
                     <div class="storyTwo" id="codesTableBody">
@@ -119,10 +103,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!--<script src="{{ url_for('static', path='/telegram-web-app.js.download') }}"></script>-->
 <script src="static/script.js"></script>
-<!--<script src="https://dev-api-client.nich.uz/static/script.js"></script>-->
+<script src="static/language.js"></script>
 
 
 </body>

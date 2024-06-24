@@ -59,7 +59,8 @@ ul li {
 }
 
 img {
-    vertical-align: top
+    vertical-align: top;
+    object-fit: contain;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -658,8 +659,8 @@ body {
 }
 
 .promo__prizes-prize-info {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 10px;
+    line-height: 10px;
     color: #005551;
     font-family: K_TCCCUnity-Bold
 }
