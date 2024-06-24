@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to get the language from the URL path
-    function getLanguageFromURL() {
-        const path = window.location.pathname;
-        const segments = path.split('/');
-        return segments.includes('uz') ? 'uz' : segments.includes('ru') ? 'ru' : 'ru';
+    // Function to get the value of a query parameter
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
     }
 
     // Load JSON translations
@@ -15,7 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(translations => {
-            const lang = getLanguageFromURL();
+            // Get the 'lang' parameter from the URL or default to 'ru' (Russian)
+            const lang = getQueryParam('lang') || 'ru';
+
+            // Access translations based on the selected language
             const selectedTranslations = translations[lang];
 
             // Apply translations to the elements
@@ -24,7 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('promo_prize_3').innerText = selectedTranslations.promo_prize_3;
             document.getElementById('congratulations_title').innerText = selectedTranslations.congratulations_title;
             document.getElementById('congratulations_text').innerText = selectedTranslations.congratulations_text;
-            document.getElementById('enter_code_placeholder').placeholder = selectedTranslations.enter_code_placeholder;
+
+            // Check if the element exists before setting placeholder
+            const codeInput = document.getElementById('codeInput');
+            if (codeInput) {
+                codeInput.placeholder = selectedTranslations.enter_code_placeholder;
+            } else {
+                console.error('Element with id "codeInput" not found.');
+            }
+
             document.getElementById('activate_code').innerText = selectedTranslations.activate_code;
             document.getElementById('my_history').innerText = selectedTranslations.my_history;
             document.getElementById('your_id').innerText = selectedTranslations.your_id;
