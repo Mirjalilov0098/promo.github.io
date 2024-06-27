@@ -24,8 +24,8 @@ nav, footer, header, aside {
 }
 
 html, body {
-    width: 100%;
-    font-size: 100%;
+    background: #87DADF !important;
+    width: 100%;=
     line-height: 1;
     font-size: 14px;
     -ms-text-size-adjust: 100%;
@@ -80,16 +80,10 @@ h1, h2, h3, h4, h5, h6 {
     --ur: "Urbanist-Regular"
 }
 
-body {
-    font-family: var(--gsb);
-    background: #fff
-}
 
 .container {
     max-width: 425px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 25px
 }
 
 .home {
@@ -597,11 +591,12 @@ body {
     border-radius: 15px
 }
 
-.promo {
+.app {
     background: #87DADF;
     min-height: 100vh;
     height: 100%
 }
+
 
 .promo__title {
     display: flex;
@@ -654,6 +649,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 
 }
 
@@ -666,7 +662,7 @@ body {
 
 .promo__prizes-photo {
     height: 126px;
-    width: 110px;
+    max-width: 126px;
     align-self: start;
     object-fit: cover;
 }
@@ -1313,7 +1309,6 @@ body {
 }
 
 .storyTwo__navinfo {
-    padding: 17px 27px;
     background: #FFFFFF;
     border-radius: 10px;
     display: flex;
@@ -1329,7 +1324,7 @@ body {
     background-color: #009490;
     color: #ffffff;
     font-family: K_TCCCUnity-Bold;
-    border-radius: 27.57%;
+    border-radius: 11px;
     padding: 4px 25px;
 }
 
