@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to get the value of a query parameter
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
 
-    // Load JSON translations
     fetch('static/translations.json')
         .then(response => {
             if (!response.ok) {
@@ -14,20 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(translations => {
-            // Get the 'lang' parameter from the URL or default to 'ru' (Russian)
-            const lang = getQueryParam('lang') || 'ru';
+            const lang = getQueryParam('lang') || 'uz';
+            console.log('Language:', lang);
 
-            // Access translations based on the selected language
             const selectedTranslations = translations[lang];
 
-            // Apply translations to the elements
             document.getElementById('promo_prize_1').innerText = selectedTranslations.promo_prize_1;
             document.getElementById('promo_prize_2').innerText = selectedTranslations.promo_prize_2;
             document.getElementById('promo_prize_3').innerText = selectedTranslations.promo_prize_3;
             document.getElementById('congratulations_title').innerText = selectedTranslations.congratulations_title;
             document.getElementById('congratulations_text').innerText = selectedTranslations.congratulations_text;
 
-            // Check if the element exists before setting placeholder
             const codeInput = document.getElementById('codeInput');
             if (codeInput) {
                 codeInput.placeholder = selectedTranslations.enter_code_placeholder;
@@ -42,6 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('date').innerText = selectedTranslations.date;
             document.getElementById('points').innerText = selectedTranslations.points;
             document.getElementById('status').innerText = selectedTranslations.status;
+
+            window.messages = {
+                "success": selectedTranslations.success || "Tabriklaymiz, kodingiz ro‘yxatdan o‘tkazildi. Iltimos, qopqoqlarni saqlab qo‘ying va Telegram botimizdagi yangiliklarni kuzatib borishni unutmang.",
+                "conflict": selectedTranslations.conflict || "Afsuski, ushbu код avval ro‘yxatdan o‘tkazilgan. Iltimos, ro‘yxatdan o‘tkazilmagan kodlarni kirgizing.",
+                "wrong": selectedTranslations.wrong || "Afsuski, noto‘g‘ri код kirgizildi. Iltimos, tekshiring va qaytadan urinib ko‘ring. Eslatib o‘tamiz, noto‘g‘ri kodlar kirgizishda cheklov mavjud va siz cheklovni buzsangiz bloklanishingiz mumkin.",
+                "warning": selectedTranslations.warning || "Afsuski, noto‘g‘ri kodlar kirgizishda cheklovni buzganligingiz uchun bloklangansiz. Iltimos, blokdan chiqishingizni kuting.",
+                "accept": selectedTranslations.accept || "Davom ettirish",
+                "failed": selectedTranslations.failed || "Kutish",
+                "retry": selectedTranslations.retry || "Qayta urinish",
+            };
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);

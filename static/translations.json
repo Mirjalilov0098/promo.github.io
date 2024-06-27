@@ -12,7 +12,14 @@
     "number_of_caps": "Qopqoqlar soni:",
     "date": "Sana",
     "points": "Ballar",
-    "status": "Status"
+    "status": "Status",
+    "success": "Tabriklaymiz, kodingiz ro‘yxatdan o‘tkazildi. Iltimos, qopqoqlarni saqlab qo‘ying va Telegram botimizdagi yangiliklarni kuzatib borishni unutmang.",
+    "conflict": "Afsuski, ushbu код avval ro‘yxatdan o‘tkazilgan. Iltimos, ro‘yxatdan o‘tkazilmagan kodlarni kirgizing.",
+    "wrong": "Afsuski, noto‘g‘ri код kirgizildi. Iltimos, tekshiring va qaytadan urinib ko‘ring. Eslatib o‘tamiz, noto‘g‘ri kodlar kirgizishda cheklov mavjud va siz cheklovni buzsangiz bloklanishingiz mumkin.",
+    "warning": "Afsuski, noto‘g‘ri kodlar kirgizishda cheklovni buzganligingiz uchun bloklangansiz. Iltimos, blokdan chiqishingizni kuting.",
+    "accept": "Davom ettirish",
+    "failed": "Kutish",
+    "retry": "Qayta urinish"
   },
   "ru": {
     "promo_prize_1": "Покупайте «Дюшес», «Тархун», «Буратино» и «Лимонад» в любом объеме от 0,5 до 2 л",
@@ -27,6 +34,13 @@
     "number_of_caps": "Количество крышек:",
     "date": "Дата",
     "points": "Баллы",
-    "status": "Статус"
+    "status": "Статус",
+    "success": "Поздравляем, ваш код зарегистрирован. Пожалуйста, сохраните крышки и не забудьте подписаться на наш Телеграм бот, чтобы быть в курсе обновлений.",
+    "conflict": "К сожалению, этот код уже зарегистрирован. Пожалуйста, введите незарегистрированные коды.",
+    "wrong": "К сожалению, был введен неправильный код. Пожалуйста проверьте и попробуйте снова. Обратите внимание, что существует ограничение на ввод неправильных кодов и вас могут заблокировать, если вы нарушите этот лимит.",
+    "warning": "К сожалению, вас заблокировали за нарушение ограничения на ввод неверных кодов. Пожалуйста, подождите, пока вас не разблокируют.",
+    "accept": "Принять",
+    "failed": "Ждить",
+    "retry": "Повторить попытку"
   }
 }
