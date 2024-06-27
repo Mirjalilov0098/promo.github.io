@@ -24,13 +24,19 @@ nav, footer, header, aside {
 }
 
 html, body {
-    background: #87DADF !important;
-    width: 100%;=
+    /*background-image: url('static/images/img.png');*/
+    background-color: #87DADF !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
     line-height: 1;
     font-size: 14px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+
 }
 
 input, button, textarea {
@@ -581,10 +587,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #181725
 }
 
-.fastfoods {
-    padding: 0 0 120px
-}
-
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 16px !important;
     background: #35B61D;
@@ -662,7 +664,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .promo__prizes-photo {
     height: 126px;
-    max-width: 126px;
+    max-width: 115px;
     align-self: start;
     object-fit: cover;
 }
@@ -1686,69 +1688,6 @@ h1, h2, h3, h4, h5, h6 {
 .modal-exit.active {
     transform: translate(0);
     transition: all 2s
-}
-
-.fastfoods-content {
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap: 10px
-}
-
-@media (max-width: 415px) {
-    .categories-section-block {
-        width: 100%
-    }
-}
-
-@media (max-width: 410px) {
-    .cart-cards {
-        justify-content: center
-    }
-
-    .fastfoods {
-        padding-bottom: 140px
-    }
-}
-
-@media (max-width: 375px) {
-    .navigation__bar {
-        justify-content: space-evenly
-    }
-
-    .navigation__bar-list {
-        gap: 10px;
-        flex-direction: column
-    }
-
-    .text-img {
-        margin: -100px 0 0
-    }
-
-    .econom {
-        bottom: 150px
-    }
-
-    .categories-section, .fastfoods-content {
-        grid-template-columns:repeat(1, 1fr)
-    }
-
-    .fastfoods-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column
-    }
-
-    .fastfoods-content div {
-        width: 150px;
-        height: 150px
-    }
-
-    .fastfoods-content div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
-    }
 }
 
 .navigation {
