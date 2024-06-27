@@ -644,7 +644,7 @@ body {
 
 .promo__prizes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     gap: 5px;
     width: 100%;
@@ -666,9 +666,9 @@ body {
 
 .promo__prizes-photo {
     height: 126px;
-    width: 126px;
-    align-self: start
-
+    width: 110px;
+    align-self: start;
+    object-fit: cover;
 }
 
 .promo__input {
